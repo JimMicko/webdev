@@ -1,0 +1,149 @@
+@use 'variables';
+@use 'mixins';
+@import url('https://fonts.cdnfonts.com/css/script-mt?styles=95594');
+
+nav{
+    background-color: variables.$logo_blue;
+}
+
+.body{
+    background-color: #f5f5f7;
+}
+
+main{
+    margin-top: 60px;
+    padding: 20px;
+}
+
+/* navbar starts here */
+ul li{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.navbar-collapse ul li a{
+    color: variables.$white;
+    display: flex;
+    justify-content: center;
+}
+
+// ul li a:hover, a:hover, h3, h4, h6{
+//     color: variables.$secondary;
+// }
+
+.navbar-toggler{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transition: .5s ease-in-out;
+}
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus{
+    outline: none;
+    box-shadow: none;
+    border: 0;
+}
+.navbar-toggler span{
+    margin: 0;
+    padding: 0;
+}
+.toggler-icon{
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: red;
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+.middle-bar{
+    margin-top: 0px;
+}
+.navbar-toggler .top-bar{
+    margin-top: 0px;
+    transform: rotate(135deg);
+}
+.navbar-toggler .middle-bar{
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.navbar-toggler .bottom-bar{
+    margin-top: 0px;
+    transform: rotate(-135deg);
+}
+.navbar-toggler.collapsed .top-bar{
+    margin-top: -20px;
+    transform: rotate(0deg);
+}
+.navbar-toggler.collapsed .middle-bar{
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.navbar-toggler.collapsed .bottom-bar{
+    margin-top: 20px;
+    transform: rotate(0deg);
+}
+.navbar-toggler.collapsed .toggler-icon{
+    background: variables.$white;
+}
+nav{
+    margin-top: 1px;
+    border-top: solid 2px variables.$logo_red;
+    border-bottom: solid 2px variables.$logo_red; 
+}
+
+.banner, .logo h2 {
+    color: variables.$white !important;
+    font-family: 'Script MT Bold', sans-serif;
+    font-weight: bolder;
+    font-size: 30px ;
+}
+
+// .banner-hover{
+//     color: variables.$primary_color !important;
+//     font-family: 'Script MT Bold', sans-serif;
+//     font-weight: bolder;
+//     font-size: 30px !important;
+// }
+
+// .banner-hover img{
+//     border-radius: 50px;
+//     border: 3px solid variables.$primary_color;
+//     margin-top: -10px;
+// }
+
+// .banner-hover:hover img{
+//     border-radius: 50px;
+//     border: 3px solid variables.$secondary;
+// }
+
+#home{
+    background-image: url(/images/background.jpeg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+#contact label{
+    color: variables.$logo_text;
+}
+#contact h5,
+#contact h3{
+    color: variables.$logo_text;
+}
+#contact input,
+#contact textarea,
+#contact button{
+    border: 3px solid variables.$logo_text;
+}
+
+footer{
+    background-color: variables.$logo_blue;
+    height: 60px;
+}

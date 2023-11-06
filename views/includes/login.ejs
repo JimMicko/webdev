@@ -1,0 +1,81 @@
+<section id="loginPage">
+    <div class="loginPageContainerContainer">
+        <div class="loginPageContainer">
+            <i class="fa-solid fa-circle-xmark" onclick="closeLoginPage()"></i>
+            <div class="loginHeader">
+                <img src="/images/logo.png" style="height: 40px;">
+                <h2>MyMilkTea</h2>
+            </div>
+            <div class="containerContainer" id="containerContainer">
+                <div class="loginContainer">    
+                    <div class="login-boxHeader">    
+                        <h2>Login</h2>
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+                    <form name="login" action="/login" method="GET">
+                        <div id="error-message"></div><br>
+                        <div class="user-box">
+                            <input type="email" name="email" id="login_username" required="">
+                            <label>Email:</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="password" name="password" id="login_password" required="">
+                            <label>Password:</label>
+                        </div>
+                        <div class="checkbox">
+                            <div>
+                                <input type="checkbox" onclick="show()" class="smallbox" value="">
+                                <label class="checkboxlabel">Show Password</label> 
+                            </div>
+                            <a href="">Forgot Password</a>
+                        </div>
+                        <div class="buttons">
+                            <div class="button1">
+                                <button type="submit" class="button">Login</button>
+                            </div>
+                            <div class="button2">
+                                <button type="button" class="button" id="signUpBtn" onclick="showSignUp()">Sign up</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="signUpContainer">
+                    <div class="login-boxHeader">    
+                        <h2>Sign Up</h2>
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+                    <form name="login" action="/login" method="POST">
+                        <div id="error-message"></div><br>
+                        <div class="user-box">
+                            <input type="text" name="name" id="signup_username" required="">
+                            <label>Name:</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="email" name="email" id="signup_username" required="">
+                            <label>Email:</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="password" name="password" id="signup_password" required="">
+                            <label>Password:</label>
+                        </div>
+                        <div class="checkbox">
+                            <div>
+                                <input type="checkbox" onclick="show()" class="smallbox" value="">
+                                <label class="checkboxlabel">Show Password</label> 
+                            </div>
+                            <a href="">Forgot Password</a>
+                        </div>
+                        <div class="buttons">
+                            <div class="button1">
+                                <button type="button" class="button" id="loginBtn" onclick="showLogin()">Login</button>
+                            </div>
+                            <div class="button2">
+                                <button type="submit" class="button">Sign up</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
